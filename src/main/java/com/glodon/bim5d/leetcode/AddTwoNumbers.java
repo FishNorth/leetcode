@@ -43,14 +43,14 @@ public class AddTwoNumbers {
                 q = q.next;
                 r.next = temp;
                 r = r.next;
-            } else if (q == null && p != null) {
+            } else if ( p != null) {
                 lowData = (p.val + highData) % 10;
                 highData = (p.val + highData) / 10;
                 ListNode temp = new ListNode(lowData);
                 p = p.next;
                 r.next = temp;
                 r = r.next;
-            } else if (highData != 0) {
+            } else {
                 ListNode temp = new ListNode(highData);
                 highData = 0;
                 r.next = temp;
